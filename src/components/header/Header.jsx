@@ -7,14 +7,18 @@ function Header(){
     const [movies, setMovies] = useState([])
     const {register, handleSubmit, reset, watch} = useForm()
 
-    const queryInputRegister_1 = register('queryInput_1')  
-    const queryInputRegister_2 = register('queryInput_2') 
-    const queryInput_1 =  watch ('queryInput_1') 
-    const queryInput_2 =  watch ('queryInput_2') 
+    const queryInputRegister_1 = register('title')  
+    const queryInputRegister_2 = register('year') 
 
 
     const onSubmit = async (data)=>{
-        const response = await axios.get(`http://www.omdbapi.com/?t=${queryInput_1}%2B1&y=${queryInput_2}&plot=full`)
+        const payload ={
+            apikey: '254cd296',
+            t: data.title,
+            y: data.year,
+            plot: 'full'
+          }
+        const response = await axios.get(`http://www.omdbapi.com/`, {params:payload})
         console.log(response.data)
         setMovies(response.data)
         
@@ -30,6 +34,7 @@ function Header(){
                     Go
                 </button>
             </form>
+            
         </div>
     )
 }
