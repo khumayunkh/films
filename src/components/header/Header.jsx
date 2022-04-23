@@ -5,7 +5,7 @@ import axios from "axios";
 
 function Header(){
     const [movies, setMovies] = useState([])
-    const {register, handleSubmit, reset, watch} = useForm()
+    const {register, handleSubmit, reset} = useForm()
 
     const queryInputRegister_1 = register('title')  
     const queryInputRegister_2 = register('year') 
@@ -30,12 +30,12 @@ function Header(){
             <div className={style.container}>
                 <div className={style.header_in}>
                     <div className={style.title}><h1>Created by Khumoyun</h1></div>
-                    <div className={style.input}>
+                    <div className={style.input_in}>
                         <form  onSubmit={handleSubmit(onSubmit)}>
                             <input {...queryInputRegister_1} className={style.input} placeholder='Name of film'/>
                             <input {...queryInputRegister_2} className={style.input} placeholder='year'/>
-                            <button className='button'>
-                                 Go
+                            <button className={style.noselect}>
+                                 Search
                             </button>
                         </form>
                     </div>
@@ -46,7 +46,7 @@ function Header(){
                             <h2>{movies.Actors}</h2>
                         </div>
                         <div className={style.subtitle}>
-                            <h1>{movies.imdbRating}</h1>
+                            <h1 className={style.rate}>{movies.imdbRating}</h1>
                             <h3>{movies.Plot}</h3>
                         </div>
                     </div>
@@ -55,21 +55,6 @@ function Header(){
         </div>
         </>
       )
-    {/* // return(
-    //     <div className={style.Header}>
-    //         <form  onSubmit={handleSubmit(onSubmit)}>
-    //             <input {...queryInputRegister_1} className='input' placeholder='Name of film'/>
-    //             <input {...queryInputRegister_2} className='input' placeholder='year'/>
-    //             <button className='button'>
-    //                 Go
-    //             </button>
-    //         </form>
-    //         <div>
-    //             {movies.Title}
-    //             <img src={movies.Poster} alt="" />
-    //         </div>
-    //     </div>
-    // ) */}
 }
 
 

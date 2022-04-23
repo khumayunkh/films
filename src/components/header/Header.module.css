@@ -1,5 +1,111 @@
 .header_in{
-    background-image: url('https://s3-us-west-2.amazonaws.com/prd-rteditorial/wp-content/uploads/2018/03/13153742/RT_300EssentialMovies_700X250.jpg');
+    background-image: url('https://wallpaperaccess.com/full/19681.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+h1{
+    color: white;
+    font-size: 45px
+}
+form{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5%;
+    margin-top: -2%;
+}
+.input{
+    background-color: white;
+    border-style: none;
+    height: 5vh;
+    width: 30vw;
+    border-radius: 10px;
+    box-shadow: 1px 10px 15px rgb(117, 116, 116);  
+    padding-left: 25px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.noselect {
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+          -webkit-tap-highlight-color: transparent;
+  }
+  
+  button {
+      width: 150px;
+      height: 50px;
+      cursor: pointer;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #7f5a83;
+      background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+      background-size: 200% 100%;
+      background-position: left;
+      background-repeat: no-repeat;
+      transition: 500ms;
+      margin-top: 1%;
+  }
+  
+  button:before {
+      content: 'Search';
+      color: rgba(255,255,255,0.5);
+      font-size: 16px;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 140px;
+      height: 40px;
+      background-color: #1b2845;
+      background-image: linear-gradient(315deg, #1b2845 0%, #274060 74%);
+      transition: 500ms;
+  }
+  
+  button:hover {
+      background-position: right;
+  }
+  
+  button:hover:before {
+      color: rgba(255,255,255,0.8);
+  }
+  
+  button:focus {
+      outline: none;
+  }
+
+  .film{
+      justify-self: start;
+      display: flex;
+      flex-direction: row;
+      margin-left: 2%;
+  }
+
+ 
+.subtitle{
+    margin-top: 4%;
+    justify-self: start;
+    margin-left: 2%;
+    margin-right:2% ;
+    
+}
+img{
+    box-shadow: 0px -10px 15px rgb(255, 255, 255);
+}
+h1,h2,h3,h4{
+    color: white;
+}
+
+.rate{
+    margin-left: -24%;
 }
