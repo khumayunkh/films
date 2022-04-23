@@ -24,19 +24,52 @@ function Header(){
         
         reset()
       }
-
-    return(
-        <div className={style.Header}>
-            <form  onSubmit={handleSubmit(onSubmit)}>
-                <input {...queryInputRegister_1} className='input' placeholder='Name of city'/>
-                <input {...queryInputRegister_2} className='input' placeholder='Name of city'/>
-                <button className='button'>
-                    Go
-                </button>
-            </form>
-            
+      return(
+        <>
+        <div className={style.header}>
+            <div className={style.container}>
+                <div className={style.header_in}>
+                    <div className={style.title}><h1>Created by Khumoyun</h1></div>
+                    <div className={style.input}>
+                        <form  onSubmit={handleSubmit(onSubmit)}>
+                            <input {...queryInputRegister_1} className={style.input} placeholder='Name of film'/>
+                            <input {...queryInputRegister_2} className={style.input} placeholder='year'/>
+                            <button className='button'>
+                                 Go
+                            </button>
+                        </form>
+                    </div>
+                    <div className={style.film}>
+                        <div className={style.img}>
+                            <img src={movies.Poster}/>
+                            <h2>{movies.Title}</h2>
+                            <h2>{movies.Actors}</h2>
+                        </div>
+                        <div className={style.subtitle}>
+                            <h1>{movies.imdbRating}</h1>
+                            <h3>{movies.Plot}</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    )
+        </>
+      )
+    {/* // return(
+    //     <div className={style.Header}>
+    //         <form  onSubmit={handleSubmit(onSubmit)}>
+    //             <input {...queryInputRegister_1} className='input' placeholder='Name of film'/>
+    //             <input {...queryInputRegister_2} className='input' placeholder='year'/>
+    //             <button className='button'>
+    //                 Go
+    //             </button>
+    //         </form>
+    //         <div>
+    //             {movies.Title}
+    //             <img src={movies.Poster} alt="" />
+    //         </div>
+    //     </div>
+    // ) */}
 }
 
 
